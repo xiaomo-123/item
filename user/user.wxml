@@ -1,0 +1,3 @@
+<!--user/user.wxml-->
+<text>{{pic[0].src}}</text>
+ <image src='{{pic[0].src}}'></image>

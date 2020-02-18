@@ -1,1 +1,43 @@
-<view>hello</view>
+
+<!-- 列表循环 
+一、数组
+1、wx:for="{{数组或对象}}" wx:for-item="循环项的名称" wx:for-idex="循环项的索引"
+2、wx:key="唯一的值" 用来提高列表演杂的性能
+  1>、wx:key 绑定一个普通的字符串的时候，那么这个字符串的名称肯定是循环项数组中的对象的唯一属性
+  2>、wx:key="this"就表示你的数组是一个普通数组*this表示是循环项
+3、当出现数组的嵌套循环的时候，尤其要注意以下绑定的名称不要第一名
+ wx:for-item="item" 	wx:for-index="index"
+ 4、默认情况下，我们不写
+ wx:for-item="item" 	wx:for-index="index"
+ 小程序默认
+ 二、对象循环
+ 1、wx:for="{{对象}}" wx:for-item="对象的值" wx:for-idex="对象的属性"
+-->
+ <!-- 遍历图片文件，生成各个view -->
+ <view class='photo-list' wx:for="{{img}}" wx:key="id">
+
+  <view class='photo-item'>
+    <image src='{{item.src}}'></image>
+  </view>
+</view> 
+
+<view>
+	<view wx:for="{{img}}" 
+		wx:key="id"
+	>
+    索引:{{index}}
+    --
+    值:{{item.src}}
+	</view>
+	<block wx:for="{{list}}" 
+		wx:key="id"
+	>
+    索引:{{index}}
+    --
+    值:{{item.name}}
+	</block>
+	数据：{{img}}
+
+</view>
+
+
