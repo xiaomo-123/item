@@ -7,19 +7,19 @@ App({
   	wx.cloud.init({
         env: "yun-njsxx",
         traceUer: true,
-      });
-    new ImageLoad({
+      });     
+  },
+      PromiseGetData(){     
+  return new Promise((a,b)=>{
+       new ImageLoad({
       base: ImageSource.BASE,
       source: [ImageSource],     
       loaded: res => {
-       this.globalData.status = res.status;
-        this.globalData.sourceLoaded = res;
-     if (this.sourceLoaded) {         
-        this.sourceLoaded && this.sourceLoaded(res); 
-          } 
+       a(res);
       }
-    });    
-  },
+    });  
+  })
+},
    globalData: {
         userInfo: null
     }

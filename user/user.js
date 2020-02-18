@@ -14,18 +14,13 @@ pic:[]
    */
   onLoad: function (options) {
     var that = this;
-    if (app.globalData.status) {    
-      this.setData({
-        pic: app.globalData.sourceLoaded.arr
-      })
-    } else {
-      app.sourceLoaded = source => {       
-        this.setData({
-            pic: source.arr
+ 
+app.PromiseGetData().then(function(res){
+      console.log(res);
+       that.setData({
+            pic: res.arr
         })
-      }
-    }   
-
+    })
 
   }
 })

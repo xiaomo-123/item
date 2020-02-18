@@ -7,17 +7,12 @@ img:[]
  
 onLoad(){	
 var that=this;
-if (app.globalData.status){
-  that.setData({
-    img: app.globalData.sourceLoaded.arr
-  			})
-}else{
-app.sourceLoaded = source => {    
-            this.setData({
-                img: source.arr
+app.PromiseGetData().then(function(res){
+      console.log(res);
+       that.setData({
+                img:res.arr
             })
-        }
-}
+    })
 const db=wx.cloud.database(); 
  db.collection("users").get({           
      success:res=>{       
