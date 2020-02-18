@@ -15,8 +15,7 @@ pic:[]
   onLoad: function (options) {
     var that = this;
  
-app.PromiseGetData().then(function(res){
-      console.log(res);
+app.PromiseGetData().then(function(res){ 
        that.setData({
             pic: res.arr
         })
