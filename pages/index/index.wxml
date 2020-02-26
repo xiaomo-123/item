@@ -1,8 +1,7 @@
-
- <view class='photo-list' wx:for="{{img}}" wx:key="id">
-
+ <view class='title'>异域山川</view>
+ <view class='photo-list' wx:for="{{img}}" wx:key="id" wx:if="{{index<4}}">
   <view class='photo-item'>
-    <image src='{{item.src}}'></image>
+    <image style="height:{{imgH}}px"  mode="widthFix" src='{{item.src}}'></image>
   </view>
 </view> 
 

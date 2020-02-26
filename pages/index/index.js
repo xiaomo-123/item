@@ -5,9 +5,10 @@ Page({
 img:[]
   },
  
-onLoad(){	
+onLoad(){	 
+
 var that=this;
-app.PromiseGetData().then(function(res){     
+app.PromiseGetData().then(function(res){    
        that.setData({
                 img:res.arr
             })
@@ -22,6 +23,13 @@ const db=wx.cloud.database();
       })      
      }}
 })
-
-}
+},
+  onHide: function () {
+    let timer = this;
+    clearInterval(timer.data.timer);
+  },
+onUnload:function(){ 
+    let timer = this;
+    clearInterval(timer.data.timer);
+  }
 })
