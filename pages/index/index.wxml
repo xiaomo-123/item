@@ -1,11 +1,5 @@
- <view class='title'>异域山川</view>
- <view class='photo-list' wx:for="{{img}}" wx:key="id" wx:if="{{index<4}}">
-  <view class='photo-item'>
-    <image  mode="widthFix" src='{{item.src}}'></image>
-  </view>
-</view> 
-
-
+<import src="../../moban/template.wxml"/>
+<template is="moban" data="{{...moban}}" />
 
 
 

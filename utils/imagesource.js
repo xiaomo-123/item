@@ -1,5 +1,5 @@
 module.exports = {
-  "BASE": "https://7975-yun-njsxx-1300970458.tcb.qcloud.la/",
+  "BASE": "cloud://huihuatu-4ktve.6875-huihuatu-4ktve-1301389937/",
   "imageList": [
     "1.jpg",
     "2.jpg",

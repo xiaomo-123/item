@@ -9,14 +9,22 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false,
 		"coverView": true,
+		"autoAudits": false,
 		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.10.0",
-	"appid": "wx9d1a084897b1ddea",
+	"libVersion": "2.6.0",
+	"appid": "wxd56dbbc02898b7c1",
 	"projectname": "progrom",
 	"debugOptions": {
 		"hidedInDevtools": []

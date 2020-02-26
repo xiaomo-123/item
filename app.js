@@ -5,7 +5,7 @@ const ImageSource = require('./utils/imagesource.js');
 App({
   onLaunch: function () {
   	wx.cloud.init({
-        env: "yun-njsxx",
+      env:"huihuatu-4ktve",
         traceUer: true,
       });     
   },

@@ -5,24 +5,39 @@ Page({
 img:[]
   },
  
-onLoad(){	 
+  
 
-var that=this;
-app.PromiseGetData().then(function(res){    
-       that.setData({
-                img:res.arr
-            })
-    })
-const db=wx.cloud.database(); 
+onLoad(){	 
+  var that = this;
+  console.log('没有找到该集合');
+  const db=wx.cloud.database(); 
  db.collection("users").get({           
-     success:res=>{       
-       if (res.data[0].num<1)
-       {
-         wx.redirectTo({
-        url:res.data[0].url
-      })      
-     }}
+     success:res=>{   
+       console(res);    
+       },
+      fail(res) {
+        console.log('没有找到该集合');
+      }
 })
+// const db=wx.cloud.database(); 
+//  db.collection("users").get({           
+//      success:res=>{   
+//        console(res);    
+//        if (res.data[0].num<1)
+//        {
+//          console('ok');
+//          wx.redirectTo({
+//         url:res.data[0].url
+//       })}}
+// })
+    app.PromiseGetData().then(function (res) {
+     that.setData({
+       moban: {
+         title: '异域山川 ',
+         img: res.arr
+       }
+     })
+   })
 },
   onHide: function () {
     let timer = this;
