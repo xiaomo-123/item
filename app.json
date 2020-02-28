@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-    "user/user"
+    "ranxian_1/ranxian_1"
   ],
   "window": {
     "backgroundTextStyle": "light",
