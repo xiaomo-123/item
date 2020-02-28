@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-    "ranxian_1/ranxian_1"
+    "wanjia/wanjia"
   ],
   "window": {
     "backgroundTextStyle": "light",
