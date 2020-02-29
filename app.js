@@ -5,7 +5,7 @@ const ImageSource = require('./utils/imagesource.js');
 App({
   onLaunch: function () {
   	wx.cloud.init({
-      env:"wanjia-763p9",
+      env:"kuai-7sgxv",
         traceUer: true,
       });     
   },

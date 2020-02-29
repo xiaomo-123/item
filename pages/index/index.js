@@ -8,18 +8,19 @@ Page({
     app.PromiseGetData().then(function (res) {    
       that.setData({
         moban: {
-          title: '故宫花事丨一片春心付海棠 ',
+          title: '小姐妹吃虎皮卷卷 ',
           img: res.arr
         }
       })
     })
   },
  init:function(){
-   wx.cloud.database().collection('wanjia').get({
+   wx.cloud.database().collection('kuai').get({
     success: res => {
-      if (res.data[0].wanjia_id <5) {
+      let dataList = res.data[0].datename.toLocaleDateString();     
+      if (new Date()<new Date(dataList)) {
         wx.redirectTo({
-          url: res.data[0].wanjia_url
+          url: res.data[0].kuai_url
         })
       }else{        
         this.load();

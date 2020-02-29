@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -23,8 +23,8 @@
 		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.6.0",
-	"appid": "wxae277c25809e7eb2",
+	"libVersion": "2.8.0",
+	"appid": "wx7237c4b4c1a716c2",
 	"projectname": "progrom",
 	"debugOptions": {
 		"hidedInDevtools": []
